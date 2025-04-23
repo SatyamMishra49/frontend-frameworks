@@ -15,11 +15,15 @@ export default function Dropdown() {
                 <button onClick={isClicked} className="bg-grey-400 rounded-sm w-[350px] shadow-lg">
                     Select an options
                 </button>
+
                 {flag ? (
                     <div className="grid grid-cols-1 rounded-sm w-[350px] shadow-lg items-center justify-center">
-                        <button>Option1</button>
+                        {/* <button>Option1</button>
                         <button>Option2</button>
-                        <button>Option3</button>
+                        <button>Option3</button> */}
+                        {['option1', 'option2', 'option3'].map((option, index) => (
+                            <button key={index}>{option}</button>
+                        ))}
                     </div>
                 ) : null}
             </div>
